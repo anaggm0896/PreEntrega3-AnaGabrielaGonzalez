@@ -1,4 +1,32 @@
 @charset "UTF-8";
+/* no sirve
+//Variables de la caja
+
+$ancho-box:80%;
+$alto-box:300px;
+
+
+
+//Variables de colores con MAP
+$colores:(
+    fondo:#FCF4D9,
+    titulares: #00AAA0,
+    parrafo:black,
+    box: #FF7A5A,   
+);
+
+$color-mixin:black;
+
+//Commons NO necesita leer a NADIE
+
+*/
+.footer {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: burlywood;
+  font-size: 15px;
+}
+
 body {
   margin: 0;
   margin-top: 2cm;
@@ -171,13 +199,6 @@ h1 {
   text-align: end;
 }
 
-.footer {
-  text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: burlywood;
-  font-size: 15px;
-}
-
 /* Bungalows pagina */
 @media screen and (min-width: 1400px) {
   #main {
@@ -233,4 +254,75 @@ h1 {
     align-items: center;
     align-content: space-between;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*
+  @use '_commons' as c; //con esto leo a commons
+
+
+body{
+    background-color:map-get(c.$colores,"fondo");
+}
+
+h1{
+    color:map-get(c.$colores,"titulares");
+}
+
+//Condicionales
+p{
+    @if map-get(c.$colores,"fondo")==#FCF4D9{color:black}
+    @else {color:white}
+}
+
+
+.box-container{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    gap:10px;
+    text-align: center;
+}
+
+//Operadores
+
+.box{
+    width: calc(c.$ancho-box/3);
+    background-color: map-get(c.$colores,"box");
+    height: c.$alto-box;
+
+    //Anidacion y Operador de suma
+    &:nth-child(2){
+        height: calc(c.$alto-box + 100px);
+    }
+
+}
+
+//EXTEND
+
+.box-container-2{
+    @extend .box-container;
+    margin-top: 30px;
+}
+
+
+.box-2{
+    @extend .box;
+}
+
+
+.box-container-3{
+    @extend .box-container-2;
+}
+
+//MIXINS (algunos no llevan la c. delante porque funcionan a nivel local)
+@mixin box-editable ($color-mixin:black){
+    width: calc(c.$ancho-box/3);
+    background-color: $color-mixin;
+    height: c.$alto-box;
+}
+
+.box-3{
+    @include box-editable($color-mixin:green);
+}
+
+*//*# sourceMappingURL=style.css.map */
