@@ -12,8 +12,10 @@ body {
     background: linear-gradient(white, beige);
 }
 
+
 h1 {
-    font-family: "Times New Roman", Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
 }
 
 /* Logo y Nombre */ 
@@ -25,6 +27,7 @@ h1 {
 	align-items: flex-start;
 	align-content: stretch;
 }
+
 /* Boton de reservar */ 
 
 .button {
@@ -39,49 +42,54 @@ h1 {
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
-  }
-  
-  .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .button:hover span {
-    padding-right: 25px;
-  }
-  
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+
+    & span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+      
+    & span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+      
+    &:hover span {
+        padding-right: 25px;
+
+        &:after {
+            opacity: 1;
+            right: 0;
+        }
+    }
+      
+}
+
 /* menu de navegación*/ 
 
 .nav {
     justify-content: flex-end;
-   
+
+    .barra {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-content: stretch;
+    
+    }
 }
 
-.barra {
-    list-style: none;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: flex-start;
-	align-content: stretch;
 
-}
+
+/* media queries */
 
 @media screen and (max-width: 1200px) {
     .nav{
@@ -93,8 +101,62 @@ h1 {
         align-content: stretch;
     }
 
-  }
-/* Button */
+}
+
+@media only screen and (max-width: 600px) {
+        .img {
+      display:flex;
+    }
+}
+
+
+@media screen and (min-width: 1400px) {
+    #main{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: stretch;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #main{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: stretch;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    #conteiner
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: stretch;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    #conteiner{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: space-between;
+    }
+}
+
+/* Button menu*/
 
 .dropbtn {
     background-color: bisque;
@@ -103,66 +165,57 @@ h1 {
     font-size: 16px;
     border: none;
     width: 160px;
-  }
+}
   
-  /* Dropdown content */
-  .dropdown {
+/* Dropdown content */
+.dropdown {
     position: relative;
     display: inline-block;
 
-  }
-  
-  /* Dropdown Content (Oculto) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color:  bisque;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
+    &-content {
+        display: none;
+        position: absolute;
+        background-color:  bisque;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    &:hover{
+        .dropdown-content {display: block;}
+        .dropbtn {background-color: beige;}
+    }
+    
+}
+
   /* Links inside the dropdown */
-  .dropdown-content a {
+.dropdown-content a {
     color: brown;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    
 
-  }
-  
-  /* Color en hover */
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  /* Menu en hover */
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  /* Background color en sub */
-  .dropdown:hover .dropbtn {background-color: beige;}
+    &:hover {background-color: #ddd;} 
+}
 
-  /* Imagen */
+/* Imagen */
 
-  .img   {
+.img   {
     margin-left: 5cm;
+}
 
-    }
-    @media only screen and (max-width: 600px) {
-        .img {
-          display:flex;
-        }
-      }
       
-    #imagen1 {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 3inch 12inch 3 inch;
-        grid-template-areas: 
-        "img"
-        "na"
-        "video";
-    }
-  /* Video */
+#imagen1 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 3inch 12inch 3 inch;
+    grid-template-areas: 
+    "img"
+    "na"
+    "video";
+}
+  
+    /* Video */
 
     .video {
         display: flex;
@@ -180,27 +233,6 @@ h1 {
 /* Bungalows pagina */
 
 
-@media screen and (min-width: 1400px) {
-    #main{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-        align-content: stretch;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    #main{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-        align-content: stretch;
-    }
-  }
 .col {
     color: brown;
 }
@@ -211,34 +243,4 @@ h1 {
     text-align: center;
     margin-top: 3cm;
 }
-
-.f2 {
-    margin-top: 2cm;
-}
-
- /* Golf pagina */
-
-@media screen and (min-width: 769px) {
-    #conteiner
-    {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-        align-content: stretch;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    
-    #conteiner{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        align-content: space-between;
-    }
-  }
 
