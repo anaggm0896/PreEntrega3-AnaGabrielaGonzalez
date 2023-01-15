@@ -1,22 +1,15 @@
 
-
-/*
-
-//Variables de la caja
-
 $ancho-box:80%;
 $alto-box:300px;
 
-
-
-//Variables de colores con MAP
 $colores:(
-    fondo:#FCF4D9,
-    titulares: #00AAA0,
-    parrafo:black,
-    box: #FF7A5A,   
+    fondo:aqua,
+    titulares: #B43317,
+    parrafo:#851B05, 
+    fondoT: linear-gradient(white, beige),
 );
 
-$color-mixin:black;
-
-//Commons NO necesita leer a NADIE
+$letra:(
+    fuente: arial, times,
+    estilo: italic,
+);
