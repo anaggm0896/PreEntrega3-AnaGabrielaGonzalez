@@ -146,8 +146,7 @@ body {
 }
 
 @media screen and (min-width: 769px) {
-    #conteiner
-    {
+    #conteiner {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -155,6 +154,7 @@ body {
         align-items: center;
         align-content: stretch;
     }
+
 }
 
 
@@ -234,6 +234,28 @@ body {
 
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 80px 200px;
+    gap: 10px;
+    background-color: map-get(c.$colores, "background");
+    padding: 10px;
+    font-style: map-get(c.$letra, "fuente");
+    color: map-get(c.$colores, "fondo");
+
+
+    & > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+    }
+
+}
+  
+/* faltan condicionales y favicon*/
+
 /* Bungalows pagina */
 
 .col {
@@ -252,4 +274,4 @@ body {
 .img {
     margin-left: 5cm;
 }
-      
+

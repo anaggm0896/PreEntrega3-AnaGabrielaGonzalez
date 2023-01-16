@@ -197,6 +197,24 @@ body {
   align-content: stretch;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 80px 200px;
+  gap: 10px;
+  background-color: #7B241C;
+  padding: 10px;
+  font-style: Courier;
+  color: white;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+/* faltan condicionales y favicon*/
 /* Bungalows pagina */
 .col {
   color: #851B05;
