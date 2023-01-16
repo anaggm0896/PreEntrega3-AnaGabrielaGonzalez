@@ -89,6 +89,7 @@ body {
         align-content: stretch;
     
     }
+
 }
 
 /* media queries */
@@ -161,11 +162,14 @@ body {
 
 .dropbtn {
     background-color: bisque;
-    color: brown;
+    color: map-get(c.$colores, "menu");
     padding: 16px;
     font-size: 16px;
     border: none;
     width: 160px;
+    font-style:map-get(c.$letra,"estilo");
+    font-family:map-get(c.$letra,"fuente2");
+    color: map-get(c.$colores, "parrafo");
 }
   
 /* Dropdown content */
@@ -180,6 +184,7 @@ body {
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
+
     }
 
     &:hover{
@@ -199,42 +204,40 @@ body {
     &:hover {background-color: #ddd;} 
 }
 
-/* Imagen */
 
-.img {
-    margin-left: 5cm;
-}
-
-      
 #imagen1 {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 3inch 12inch 3 inch;
+    grid-template-rows: 6inch 6inch;
     grid-template-areas: 
     "img"
-    "na"
     "video";
-}
-  
-/* Video */
 
-.video {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: stretch;
-}
+    .text-center{
+        border-radius: 4m;
+    }
 
-.texto {
-    text-align: end;
+    .texto{
+        text-align: center;
+        color: map-get(c.$colores, "parrafo");
+        padding-left: 5%;
+    }
+
+    .video {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: stretch;
+    }
+
 }
 
 /* Bungalows pagina */
 
 .col {
-    color: brown;
+    color: map-get(c.$colores, "parrafo");
 }
 
  /* Spa pagina */
@@ -244,3 +247,9 @@ body {
     margin-top: 3cm;
 }
 
+/* Imagen */
+
+.img {
+    margin-left: 5cm;
+}
+      

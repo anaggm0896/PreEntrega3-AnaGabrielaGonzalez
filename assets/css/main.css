@@ -133,11 +133,14 @@ body {
 /* Button menu*/
 .dropbtn {
   background-color: bisque;
-  color: brown;
+  color: #C0392B;
   padding: 16px;
   font-size: 16px;
   border: none;
   width: 160px;
+  font-style: italic;
+  font-family: arial;
+  color: #851B05;
 }
 
 /* Dropdown content */
@@ -171,20 +174,21 @@ body {
   background-color: #ddd;
 }
 
-/* Imagen */
-.img {
-  margin-left: 5cm;
-}
-
 #imagen1 {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 3inch 12inch 3 inch;
-  grid-template-areas: "img" "na" "video";
+  grid-template-rows: 6inch 6inch;
+  grid-template-areas: "img" "video";
 }
-
-/* Video */
-.video {
+#imagen1 .text-center {
+  border-radius: 4m;
+}
+#imagen1 .texto {
+  text-align: center;
+  color: #851B05;
+  padding-left: 5%;
+}
+#imagen1 .video {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -193,19 +197,20 @@ body {
   align-content: stretch;
 }
 
-.texto {
-  text-align: end;
-}
-
 /* Bungalows pagina */
 .col {
-  color: brown;
+  color: #851B05;
 }
 
 /* Spa pagina */
 .formulario {
   text-align: center;
   margin-top: 3cm;
+}
+
+/* Imagen */
+.img {
+  margin-left: 5cm;
 }
 
 .footer {
