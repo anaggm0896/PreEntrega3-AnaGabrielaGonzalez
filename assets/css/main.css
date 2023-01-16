@@ -86,6 +86,17 @@ body {
     align-items: center;
     align-content: stretch;
   }
+  #main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+  }
+  #main .bungalow-imagen {
+    margin-bottom: 4%;
+  }
 }
 @media only screen and (max-width: 600px) {
   .img {
@@ -100,6 +111,17 @@ body {
     justify-content: space-around;
     align-items: center;
     align-content: stretch;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .bungalow-imagen {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch;
+    margin-bottom: 4%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -214,16 +236,28 @@ body {
   font-size: 30px;
 }
 
-/* faltan condicionales y favicon*/
+.col {
+  color: black;
+  font-style: italic;
+}
+
 /* Bungalows pagina */
 .col {
   color: #851B05;
 }
 
+#main {
+  padding-bottom: 4%;
+}
+
 /* Spa pagina */
-.formulario {
-  text-align: center;
-  margin-top: 3cm;
+.btn {
+  color: #851B05;
+  background-color: antiquewhite;
+}
+
+label {
+  color: #851B05;
 }
 
 /* Imagen */
@@ -231,6 +265,7 @@ body {
   margin-left: 5cm;
 }
 
+/* falta favicon*/
 .footer {
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
