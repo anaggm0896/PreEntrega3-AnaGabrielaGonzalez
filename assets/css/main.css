@@ -4,16 +4,12 @@ body {
   margin-top: 2cm;
   margin-bottom: 0;
   padding: 0;
-  background-color: blue;
+  background-color: white;
   width: 100%;
 }
 
 .simple-linear {
-  background: linear-gradient(blue, red);
-}
-
-h1 {
-  font-style: oblique;
+  background: linear-gradient(white, beige);
 }
 
 /* Logo y Nombre */
@@ -24,6 +20,11 @@ h1 {
   justify-content: space-between;
   align-items: flex-start;
   align-content: stretch;
+}
+#header h1 {
+  font-style: italic;
+  font-family: Courier;
+  color: #B43317;
 }
 
 /* Boton de reservar */

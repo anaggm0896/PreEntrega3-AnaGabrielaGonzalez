@@ -4,13 +4,14 @@ $alto-box:300px;
 
 
 $colores:(
-    fondo: aqua,
+    fondo: white,
     titulares: #B43317,
-    parrafo:#851B05,  
+    parrafo:#851B05,
+    fondoT: linear-gradient(white, beige),
 );
 
 $letra:(
-    fuente: arial,
+    fuente: Courier,
     estilo: italic,
 
 );

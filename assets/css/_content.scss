@@ -7,19 +7,14 @@ body {
     margin-top: 2cm;
     margin-bottom: 0;
     padding: 0;
-    background-color: blue;
+    background-color:map-get(c.$colores,"fondo");
     width: 100%;
-    
+
 }
 
 .simple-linear {
-    background: linear-gradient(blue,red);
-}
-
-h1 {
-    font-style: oblique;
-
-}
+    background: map-get(c.$colores,"fondoT");
+} 
 
 /* Logo y Nombre */ 
 #header {
@@ -29,6 +24,14 @@ h1 {
 	justify-content: space-between;
 	align-items: flex-start;
 	align-content: stretch;
+
+    h1 {
+        font-style:map-get(c.$letra,"estilo");
+        font-family:map-get(c.$letra,"fuente");
+        color: map-get(c.$colores, "titulares");
+    
+    }
+
 }
 
 /* Boton de reservar */ 
@@ -73,7 +76,6 @@ h1 {
       
 }
 
-
 .nav {
     justify-content: flex-end;
 
@@ -88,8 +90,6 @@ h1 {
     
     }
 }
-
-
 
 /* media queries */
 
@@ -201,7 +201,7 @@ h1 {
 
 /* Imagen */
 
-.img   {
+.img {
     margin-left: 5cm;
 }
 
